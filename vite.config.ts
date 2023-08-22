@@ -10,6 +10,7 @@ export default defineConfig({
 			include: ['src/**/*.ts', 'src/**/*.vue', 'src/*.ts', 'src/*.vue'],
 		}),
 	],
+	envDir: 'env',
 	esbuild: {
 		drop: ['console', 'debugger'],
 	},

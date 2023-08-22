@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --force --host",
+    "test": "vite --force --host --mode test",
+    "release": "vite --force --host --mode release",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "lint:eslint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
