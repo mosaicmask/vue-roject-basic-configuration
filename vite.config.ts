@@ -10,6 +10,9 @@ export default defineConfig({
 			include: ['src/**/*.ts', 'src/**/*.vue', 'src/*.ts', 'src/*.vue'],
 		}),
 	],
+	esbuild: {
+		drop: ['console', 'debugger'],
+	},
 	resolve: {
 		// 配置路径别名
 		alias: {
