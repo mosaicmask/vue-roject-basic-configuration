@@ -1,10 +1,14 @@
 import { defineStore } from 'pinia'
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 
 export const useAlertsStore = defineStore(
 	'alerts',
 	() => {
 		const count = ref(0)
+
+		const double = computed(() => {
+			return count.value * 2
+		})
 
 		function increment() {
 			count.value++
@@ -13,6 +17,7 @@ export const useAlertsStore = defineStore(
 		return {
 			count,
 			increment,
+			double,
 		}
 	},
 	{

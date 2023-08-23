@@ -1,38 +1,19 @@
 <script lang="ts" setup>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from '@/components/HelloWorld.vue'
+import Navbar from '@/components/Navbar/Navbar.vue'
 import { useAlertsStore } from '@/store'
 
 const store = useAlertsStore()
 </script>
 
 <template>
-	<div>
-		<span>this is App count: {{ store.count }} </span>
+	<div class="w-full h-44 flex justify-center items-center">
+		<span class="font-bold">this is App count: {{ store.count }} </span>
+		<span> this is count double :{{ store.double }}</span>
+		<HelloWorld />
 	</div>
-	<div>
-		<a href="https://vitejs.dev" target="_blank">
-			<img alt="Vite logo" class="logo" src="/vite.svg" />
-		</a>
-		<a href="https://vuejs.org/" target="_blank">
-			<img alt="Vue logo" class="logo vue" src="./assets/vue.svg" />
-		</a>
-	</div>
-	<HelloWorld msg="Vite + Vue" />
+	<Navbar />
+	<router-view />
 </template>
 
-<style scoped>
-.logo {
-	height: 6em;
-	padding: 1.5em;
-	will-change: filter;
-	transition: filter 300ms;
-}
-
-.logo:hover {
-	filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.vue:hover {
-	filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<style scoped></style>
