@@ -1,8 +1,14 @@
 <script lang="ts" setup>
 import HelloWorld from './components/HelloWorld.vue'
+import { useAlertsStore } from '@/store'
+
+const store = useAlertsStore()
 </script>
 
 <template>
+	<div>
+		<span>this is App count: {{ store.count }} </span>
+	</div>
 	<div>
 		<a href="https://vitejs.dev" target="_blank">
 			<img alt="Vite logo" class="logo" src="/vite.svg" />
